@@ -1,0 +1,77 @@
+Reading Links:
+
+https://docs.python.org/3/howto/regex.html
+https://docs.python.org/3/library/re.html
+https://docs.python.org/3/howto/regex.html#greedy-versus-non-greedy
+http://regex101.com/
+-------------------------------------------------------------------
+Regex: Search Query
+-------------------
+import re model
+---
+grep command line tool deals with regex
+---
+# extract words with thon in them
+grep thon /usr/share/dict/words
+
+# extract words ignoring case sensitiveness
+grep python -i /usr/share/dict/words
+--------------------------
+--------------------------
+# reserved characters
+--------------------------
+-------------------------
+1: . : match any characters(dot)
+# replaced by letters
+
+grep l.rts /usr/share/dict/words
+
+# example: alerts | blurts | flirts
+----
+
+2: ^ and $
+^: indicate beginning
+$: indicate end
+# both check lines not string: their start and end
+
+# find words starts with fruit
+grep ^fruit /usr/share/dict/words
+
+# find words that ends with cat
+grep cat$ /usr/share/dict/wrods
+--------------------------
+-------------------------
+Simple Matching in Python
+---
+import re
+
+re.search(r"text", "string") 	#start and end indeex
+re.search(r"^text", "line")	#start pattern
+re.search(r"text$", "line")	#end pattern
+re.search(r"text", "line", re.IGNORECASE)	#ignore upper and lower case
+
+Wildcards and Character Classes
+
+re.search(r"[Pp]ython", "python") #lower and upper
+re.search(r"[a-zA-Z0-9]text, "text or line") #matching patterns
+re.search(r"[^a-zA-Z ]", "string") # exclude letters and spaces
+re.search(r"cats|dogs", "string") # search either of them
+re.findall(r"cats|dogs", "string") #search both
+
+Repetition Qualifiers
+
+1. Repeated Matches(.*)
+
+re.search(r"text[a-zA-Z0-9].*text", "String") #return repeated matches between text
+
++(checks occurance before +: (eample: +o+l) check ol occurances)
+?(eiter 0 or 1 occurance)
+
+
+Escaping Characters
+\.
+\$
+etc
+\w* match number, alpha numeric etc
+\b
+\d :digits
