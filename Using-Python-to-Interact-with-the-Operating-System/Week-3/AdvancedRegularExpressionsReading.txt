@@ -1,0 +1,24 @@
+Reading: https://regexcrossword.com/
+Advanced Regular Expressions Cheat-Sheet
+Week 3 Module 3
+
+
+-----------------------------------------
+Capturing Groups
+re.search(r"^(...), (...)$", "text, text")
+groups[0]
+group[2]
+group[1]
+---------
+More on Repetition Qualifiers
+re.search(r"[a-zA-Z]{5}) # length of 5 chars
+re.findall(...)
+
+re.search(r"\w{0, 10}", str) # 0 to 10 length strings
+re.search(r"\w{, 10}, str) # up to 10 length
+re.search(r"\w{5, },  str) # words greater than or equal to 5 length
+
+Splitting and Replacing
+re.split(r"[.?!], "Text, Text? text! etc.)  # split string on these
+
+re.sub(r"", r"", string) # replace or substitue
