@@ -1,0 +1,75 @@
+# Reading: https://docs.python.org/3/library/subprocess.html
+# Module 2
+>>> import subprocess
+
+>>> # stdout after successful return status
+
+>>> result = subprocess.run(['host', '8.8.8.8'], capture_output=True)
+
+>>> result.returncode # Return status code
+
+0
+
+>>> result.stdout #Return array of bytes
+
+b'8.8.8.8.in-addr.arpa domain name pointer dns.google.\n'
+
+>>> result.stdout.decode() # Return encoded string array from array of bytes into utf-8
+
+'8.8.8.8.in-addr.arpa domain name pointer dns.google.\n'
+
+>>> result.stdout.decode().split() # Store result list
+
+['8.8.8.8.in-addr.arpa', 'domain', 'name', 'pointer', 'dns.google.']
+
+
+
+>>> stderr after passing invalid directory name
+
+>>> result = subprocess.run(['rm', 'IS'], capture_output=True)
+
+>>> 
+
+>>> result
+
+CompletedProcess(args=['rm', 'IS'], returncode=1, stdout=b'', stderr=b"rm: cannot remove 'IS': No such file or directory\n")
+
+>>> result.returncode
+
+1
+
+>>> result.stdout
+
+b''
+
+>>> result.stderr
+
+b"rm: cannot remove 'IS': No such file or directory\n"
+
+>>> result.stderr.decode()
+
+"rm: cannot remove 'IS': No such file or directory\n"
+
+>>> result.stderr.decode().split()
+
+['rm:', 'cannot', 'remove', "'IS':", 'No', 'such', 'file', 'or', 'directory']
+
+>>> 
+# To Hold: 
+# capture_output
+# import subprocess
+# cwd
+# import sys
+# import os
+# os.environ
+# .join()
+# returncode
+# sys.argv[1]
+# etc...
+
+
+
+
+
+
+
