@@ -9,3 +9,19 @@ Module 2 Unit Tests:
 	import module called 'unittest' and inherit 'unittest.TestCase' it in your own class
         call unittest.main() to run tests
         Additional Test Cases
+
+Module 3 Other Test Concepts
+	Black Box Test | Opaque Box: 
+		Tester is Unaware and its opaque
+	White Box Test | Clear Box | Transperent: 
+		Tester is Aware and test each unit and its not opaque
+
+	Unit Test
+	Integration Test
+	Smoke Test
+	Load Test
+
+	Test Suite: Combination of All Tests
+
+	Test Driven Development
+	Continous Integration
