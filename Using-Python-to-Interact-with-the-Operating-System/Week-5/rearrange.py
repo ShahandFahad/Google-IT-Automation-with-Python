@@ -15,8 +15,9 @@ def rearrange_name(name):
     # Can be done like this
     result = re.search(r"^([\w \.-]*), ([\w \.-]*)$", name)
     # avoid edge case
+    # avoid single name bug
     if result is None:
-        return ""
+        return name
     return "{} {}".format(result[2], result[1])
 
 
