@@ -6,7 +6,7 @@ def validate_user(username, minlength):
     # Raise type of error
     if minlength < 1:
         raise ValueError("minlength must be at least 1")
-    if len(username) < 1:
+    if len(username) < minlength:
         return False
     if not username.isalnum():
         return False
