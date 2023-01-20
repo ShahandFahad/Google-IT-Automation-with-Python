@@ -1,0 +1,11 @@
+Week 5 Testing in Python: From Manual to Automated Testing
+Module 1 Simple Test: 
+	Testing, Manual and Automated Testing
+
+Module 2 Unit Tests: 
+	Unit Tests: Isolation, Unit of code to test( Function or Method )
+	Writing Unit Tests in Python
+ 	filename_test.py
+	import module called 'unittest' and inherit 'unittest.TestCase' it in your own class
+        call unittest.main() to run tests
+        Additional Test Cases
