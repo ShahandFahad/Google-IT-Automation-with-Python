@@ -1,0 +1,65 @@
+Bash Scripting
+
+Basic Linux Commands
+    ls,mkdir,cd,echo,chmod,pwd,cp,touch,ls -l,ls -al,ls -la,mv,rm,rm *,cd ..,rmdir
+    Example: cp ../filename .
+Redirecting Streams
+    Redirection is a process of sending a stream to a different destination.
+
+    >(overwite)
+    >>(append)
+    2>(redirect error t sepearte file)
+
+    ./Test.py > TestOutputFile.txt # store output in file instead printing on terminal
+    echo "this text will be written to this file" > theFile.txt
+
+Pipes and Pilelines
+    Pipes
+        Pipes connect the output of one program to the input of another. This means we can pass data between programs, taking the output of one and making it the input of the next.
+        i.e.,
+            ls -l | less
+            cat input.txt | ./test.py               # send content of input file to the test file
+           
+            cat sample.txt | tr ' ' '\n' | sort     
+            # The contents of the txt file are passed on to be placed in their own line and sorted in alphabetical order on the display.
+
+            grep
+            ping
+
+Signalling Processes
+    Signal:
+        Signals are tokens delivered to running processes to indicate a desired action
+        Ctrl + c
+        Ctrl + z
+        fg #run once more
+        ps # list current proces
+        ps ax # all running process
+        ps ax | grep ping       # get (PID, process ID) of runnig process
+        kill PID        # kill process with that process id (PID)
+
+
+
+
+Bash Scripting
+
+Creating Bash Scripting
+Globs: *(match all), ?(match ony once)
+
+Conditional Execution in Bash
+    if grep "...condition..."; then
+        # execute this
+    else
+        # execute this
+    fi #ending line
+
+    # or this way
+    if test -n "$PATH"; then echo "IS"; fi
+    if [ -n "$PATH" ]; then echo "ISSF"; fi
+
+    cut #commnad
+     tail /var/log/syslog | cut -d' ' -f3-
+
+
+
+ 
+    
