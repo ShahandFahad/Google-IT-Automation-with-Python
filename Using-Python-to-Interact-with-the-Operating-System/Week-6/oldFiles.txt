@@ -1,0 +1,3 @@
+/home/fahad/data/jane_profile_07272018.doc
+/home/fahad/data/jane_pic_07282018.jpg
+/home/fahad/data/jane_contact_07292018.csv
