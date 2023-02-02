@@ -1,0 +1,95 @@
+In this module, you'll be introduced to the concept of version control, which will make managing and rolling back your code look super easy. You’ll learn how to differentiate between files and the tools at your disposal to make this happen. Next, you'll be introduced to Git and how you can leverage that platform to improve your coding abilities. Once you’ve got a grasp on what Git is, you’ll install it and start using it to create and clone code repositories. Last up, you’ll deep dive into Git in order to get more familiar with the different tools and commands it has to offer.
+Learning Objectives
+Describe the concept of version control and why it is important to use
+Utilize the diff and patch commands to automate differentiating and editing files
+Explain what Git is and its benefits of use
+Install Git on local machine
+Utilize Git to create and clone repositories, add code, check the status of code, and commit code
+
+
+
+
+version control
+A version control system allows us to keep track of when and who did what changes to our files. Those can be code, configuration, images, or whatever else we need to track.
+
+// show formatted changes
+git diff -u file1 file2
+
+diff
+The diff tool shows all the differences between any type of file. By highlighting what’s changed, it helps us understand the changes and see how the files have been modified.
+
+patch
+diff fil1 > file2.diff
+
+diff -u file1 > change.diff
+
+// patch changrs from 1 file to another
+patch file1.py < file2.diff
+
+ While diff is the command that generates the difference between two files, patch is the command that applies those differences to the original file.
+
+ To automatically apply changes to a file, we need to run the patch command on the file that we want to modify with the diff file as input.
+
+
+
+ VERSION CONTROL (SVS)
+ GIT 
+
+
+ First Steps with GIT
+ git config --global user.email ''
+ git config --global user.name ''
+
+ git init
+ git clone
+
+ The git directory acts as a database for all the changes tracked in Git and the working tree acts as a sandbox where we can edit the current versions of the files.
+
+ git add .
+
+ staging area(index)
+ The staging area which is also known as the index is a file maintained by Git that contains all of the information about what files and changes are going to go into your next command.
+
+
+GIT
+ git directory: contains all files
+ working tree: contatins record chages
+ git staging area: files ready or marked for next commit
+
+ commit: recording a snapshot with a proper message
+
+
+ tracked files
+ untracked files
+
+ After modifying a file, we need to stage those changes and then commit them afterwards.
+
+
+ git config -l # access repo info
+
+ You can’t commit with an empty commit message.
+
+ Rule for Writing Commit message 
+    A short description of the change (up to 50 characters), followed by one or more paragraphs giving more details of the change (if needed).
+
+
+    Commit message style guide for Git
+
+    The first line of a commit message serves as a summary.  When displayed
+    on the web, it's often styled as a heading, and in emails, it's
+    typically used as the subject.  As such, you should capitalize it and
+    omit any trailing punctuation.  Aim for about 50 characters, give or
+    take, otherwise it may be painfully truncated in some contexts.  Write
+    it, along with the rest of your message, in the imperative tense: "Fix
+    bug" and not "Fixed bug" or "Fixes bug".  Consistent wording makes it
+    easier to mentally process a list of commits.
+
+    Oftentimes a subject by itself is sufficient.  When it's not, add a
+    blank line (this is important) followed by one or more paragraphs hard
+    wrapped to 72 characters.  Git is strongly opinionated that the author
+    is responsible for line breaks; if you omit them, command line tooling
+    will show it as one extremely long unwrapped line.  Fortunately, most
+    text editors are capable of automating this.
+
+    :q
+
