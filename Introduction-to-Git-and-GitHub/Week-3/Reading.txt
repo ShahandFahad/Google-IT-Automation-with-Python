@@ -1,0 +1,43 @@
+Github: Distributed System
+
+GitHub provides free access to a Git server for public and private repositories.
+
+The git push command gathers all the snapshots we've taken and sends them to the remote repository.
+
+git push 
+git pull
+git clone
+
+
+What is remote?
+    ---------
+
+If there are pending changes in the master branch, Git will let you know.
+
+
+
+command: git remote show origin
+
+Fetching:
+git fetch fetches remote updates but doesn't merge; git pull fetches remote updates and merges.
+
+Merge Master: git merge origin/master
+
+
+git fetch and git merge:--> git pull
+
+Fast Forward: 
+    As long as there are no conflicts, Git will move the current branch tip up to the target branch tip and combine histories of both commits.
+
+
+
+Git Rebase: 
+    What does “git rebase refactor” do?
+    Move the current branch on top of the refactor branch
+    
+    This makes debugging easier and prevents three-way merges by transferring the completed work from one branch to another.
+
+    Resbase is used to keep history linear... avoid 3 way merge
+    and don not go into branching.
+
+     Rebasing instead of merging rewrites history and maintains linearity, making for cleaner code
