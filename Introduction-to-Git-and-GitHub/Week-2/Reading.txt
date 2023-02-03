@@ -1,0 +1,75 @@
+Skipping the Staging Area
+    Instead, 
+    git commit -a 
+    is a shortcut to stage any changes to tracked files and commit them in one step. 
+
+    
+    Question
+
+    If we're making a small change and want to skip the staging step, which two flags do we need to add to the git commit command? Check all that apply.
+        : Right on! The -m flag allows us to directly add the commit message to the command.
+        : Awesome! The -a flag lets us add and commit in the same step.
+
+    git -p
+    git show commit-ID
+    git log --stat
+
+    Taking the commit ID, git show will show information about the commit and its associated patch.
+    git show 1e6d39956d0a086d3b16d672d9d994ce29ab4b50
+
+    git add -p # List changes and ask for conformation
+
+
+
+    Deleting and Renaming Files
+
+        git rm : delete files
+        git mv : rename files
+        This command removes files from the working tree and from the index.
+
+
+Undoing changes
+Reverting
+
+git checkout filename # revert to the eralier version
+
+git checkout restores files to the latest stored snapshot, reverting any changes before staging.
+
+git add *
+
+
+
+
+git reset HEAD filename_to_be_removed
+
+
+Ammeding Commits
+
+git commit --amed # amend to the previous commit
+
+
+git commit --amend allows us to modify and add changes to the most 
+
+
+ROLLBACKS
+
+git revert
+
+git revert HEAD
+    With git revert, a new commit is created with inverse changes. This cancels previous changes instead of making it as though the original commit never happened.
+
+Identyfing Commits: 
+
+git revert commit-ID
+
+
+
+GIT branch
+By creating a new branch, we can experiment without breaking what already works.
+
+MERGE CONFLICT
+If two lines have differences Git is unsure about, it's best we decide than risk losing work forever.
+
+
+git log --graph --oneline
+git merge --abort
