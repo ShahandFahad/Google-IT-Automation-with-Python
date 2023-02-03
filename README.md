@@ -13,3 +13,5 @@ This certificate can be completed in about 6 months and is designed to prepare y
 [ 1: Crash Course on Python](https://coursera.org/share/d407cda6e0972069b6b296c96f8bb233)
 
 [ 2: Using Python to Interact with the Operating System](https://coursera.org/share/d22629f1821039ff8df264a6549bad37)
+
+[ 3: Introduction to Git and GitHub](https://coursera.org/share/f68604fa968417ee4906f29943310373)

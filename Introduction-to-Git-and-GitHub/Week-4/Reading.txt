@@ -1,0 +1,8 @@
+Pull Requests
+    A pull request is a commit or series of commits that you send to the owner of the repository so that they incorporate it into their tree
+
+Code Reviews
+    Doing a code review means going through someone else's code, documentation or configuration and checking that it all makes sense and follows the expected patterns. The goal of a code review is to improve the project by making sure that changes are high quality.
+
+Managing Collaboration
+    
