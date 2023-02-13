@@ -1,0 +1,56 @@
+In this module, you’ll be introduced to the fundamentals of troubleshooting and you’ll learn different strategies and approaches to tackle problems that you might encounter. You’ll learn about the concept of debugging and how debugging is one of the core principles of troubleshooting. You’ll be introduced to some tools that will help you in the debugging process, like tcpdump, ps, top, itrace, and lots more. Next, you’ll explore how to “understand the problem.” This might sound like a no brainer, but it's not as easy as you might think! Next, we’ll dive into the different approaches when troubleshooting reproducing errors versus intermittent errors. Finally, you’ll learn about “binary searching a problem.” We’ll explore the different types of searches, including binary and linear searches. Then, we’ll learn about the concept of bisecting and how it can be used in your troubleshooting approach, and finish up with finding invalid data in a CSV file.
+Learning Objectives
+Understand the concept of troubleshooting
+Grasp what debugging is and how it can help in the troubleshooting process
+Understand how to get to the root cause of a problem
+Utilize the right approach for recurring problems and intermittent problems
+Understand the difference between linear and binary searches
+Search CSV files for invalid data
+
+
+
+Introduction to Debugging
+TroubleShooing:
+    Troubleshooting is the process of identifying, analyzing, and solving problems.
+Debugging:
+    Debugging is the process of identifying, analyzing, and removing bugs in a system
+
+Debuggers:
+    Debuggers let us follow the code line by line, inspect changes in variable assignments, interrupt the program when a specific condition is met, and more. 
+    
+Problem solving?
+    1. Gathering information
+    2. Finding the root cause
+    3. Short-term remediation
+    4. Long-term remediation
+    
+    Documentation
+
+System Calls:
+    System calls are the calls that the programs running on our computer make to the running kernel.
+Strace: See System call made by a program
+        strace -o fail.strace ./script.py  #Store Trace to output file.
+
+It does not work?
+    Common questions that we can ask a user that simply report something doesn't work. 
+    a. What were you trying to do? 
+    b. What steps did you follow? 
+    c. What was the expected result? 
+    d. What was the actual result?
+
+Reproduction Case:
+     A reproduction case is a way to verify if the problem is present or not. We want to make the reproduction case as simple as possible.
+Finding the Root Cause:
+Dealing with Intermittent Issues
+    Example:
+    What sort of software bug might we be dealing with if power cycling resolves a problem?  
+    Answer: Poorly managed resources 
+            Power cycling releases resources stored in cache or memory, which gets rid of the problem.  
+
+What is a binary Search?
+    Used for sorted list.
+    Search each half depends on condition.
+    At each iteration eleminate half of the data.
+Linear Search
+    Check one by one.
+Use Bisect Method to fix problems by reducing it.
