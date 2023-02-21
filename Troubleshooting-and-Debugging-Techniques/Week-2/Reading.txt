@@ -1,0 +1,30 @@
+Slowness
+
+Understanding Slowness
+
+    The bottleneck could be the CPU time, or time spent reading data from disk.
+
+Cache
+     Cache stores data in a form that's faster to access than its original form.
+Memory Leak
+     A memory leak means that memory which is no longer needed is not getting released.
+
+
+A program keeping a state without any change can slow down a computer up until it is rebooted. 
+
+Slow Code
+    Profilers:
+        A profiler is a tool that measures the resources that our code is using, giving us a better understanding of what's going on.
+    cProfile:
+        The cProfile module is used to count how many times functions are called, and how long they run.
+
+When Slow Problem Complex
+    A script is CPU bound if you're running operations in parallel using all available CPU time.  
+
+    Executor
+    This is the process that's in charge of distributing the work among the different workers.
+
+    Future Modules  
+    The futures module provides a couple of different executors, one for using threads and another for using processes. 
+
+    The futures module makes it possible to run operations in parallel using different executors.  
