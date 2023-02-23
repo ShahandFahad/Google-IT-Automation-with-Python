@@ -44,3 +44,13 @@ Prioritizing tasks
 
 Spare drives
     Spare drives are a practical shortcut that can quickly replace hard drives in a pre-fail state.  
+
+
+Someone who has solved the issue before can apply the short-term remediation right away, and long-term solutions can be discussed later.  
+
+Including debug logging in code can make troubleshooting easier because logs can help pinpoint the actual issue, and speed up remediation
+
+ Network Attached Storage (NAS) products from vendors like NetApp can provide additional shelves to add more storage as the website’s content, and users’ data increases in size.  
+
+ When updating code to fix an issue, create a new test to ensure the change performs the intended actions.  
+
