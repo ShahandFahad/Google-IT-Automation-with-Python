@@ -41,3 +41,39 @@ Container
 Internal Server Error
 
 The /etc directory will contain the application folder that stores configuration files.  
+
+Accessing invalid memory(Segmentation Fault)
+
+Pointers (Store memory variables)
+
+Undefined Behaviour
+
+Valgrind, Dr.memory.
+
+PBD file
+    A PBD file is used to generate debugging symbols using Microsoft compilers.  
+
+Segfaults
+    Segfaults is short for Segmentation Fault, which occurs when invalid memory is being accessed.  
+
+Valgrind
+    Valgrind can assist in finding out if invalid operations are occurring in a program running on a Linux or macOS system.  
+
+Dr. Memory
+    Dr. Memory can assist in finding out if invalid operations are occurring in a program running on Windows or Linux.  
+
+
+Logging module
+The logging module sets debug messages to show up when the code fails. 
+
+
+Backtrace
+The backtrace command can be used to show a summary of the function calls that were used to the point where the failure occurs.
+
+
+gdb, pdb3(debuggers)
+
+Off-by-one bug
+ The Off-by-one bug, often abbreviated as OB1, frequently happens in computer programming when an iterative process iterates one time too many or too little.
+
+ 
