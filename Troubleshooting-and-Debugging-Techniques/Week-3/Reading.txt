@@ -76,4 +76,17 @@ gdb, pdb3(debuggers)
 Off-by-one bug
  The Off-by-one bug, often abbreviated as OB1, frequently happens in computer programming when an iterative process iterates one time too many or too little.
 
- 
+
+ Crash in Complex system
+
+    Server Crashing
+        Removing the server from the pool will provide full service to users from the remaining web servers  
+
+    Communications lead
+        Communications lead needs to know what's going on and provide timely updates on the current state and how long until the problem's resolved.
+
+        The communications lead provides timely updates on the incident and answers questions from users.  
+
+
+    Postmortems
+        Postmortems are documents that describe details of incidence to help us learn from our mistakes.
