@@ -22,3 +22,74 @@ Introduction to Automation at Scale
         The paradigm of storing all the configuration for the managed devices in version controlled files is known as Infrastructure as Code or IaC. 
 
         When all of the configuration necessary to deploy and manage a node in the infrastructure is stored in version control. 
+
+Introduction to Puppet
+    Cross Platform tool. Puppet Enables you to deploy and manage infrastructure with confidence.
+
+    Puppet Resources:
+        In puppet, resources are the basic unit for modeling the configuration that we want to manage. 
+
+        The most basic unit in Puppet is a resource, such as user, group, file, service or package.
+
+        # Syntax
+            class resource {
+                file { 'etc':
+                    attribute1 => property,
+                    attribute2 => property,
+                }
+            }
+
+    Puppet Classes
+    Group related resources
+    ###
+    # ntp (network time protocol) 
+        class ntp {
+            package { 'ntp' :
+                ensure => latest,
+            }
+            file {'etc/ntp.conf':
+                source => 'puppet:///modules/ntp/ntp.conf'
+                replace => true,
+            }
+            service {'ntp':
+                enable => true,
+                ensure => running,
+            }
+        }
+
+    ### 
+    By grouping related resources together, we can more easily understand the configuration and make changes in the future.
+
+    ### Quiz ANS:
+
+
+        Q1 -> Option 2. The Portage package manager used by Gentoo Linux is the provider called by the Puppet agent.  
+
+
+        Q2 -> Option: 1
+        class AutoConfig {
+            package { 'Executable':
+                ensure => latest,
+            }
+            file { 'executable.cfg':
+                source => 'puppet:///modules/executable/Autoconfig/executable.cfg'
+                replace => true,
+            }
+            service { 'executable.exe':
+                enable  => true,
+                ensure  => running,
+            }
+        }
+
+        The AutoConfig class has all its resources grouped together using proper Puppet syntax.  
+        Q3 -> Option 1:
+            Grouping a collection of related resources into a single class simplifies configuration management by, for one example, allowing us to apply a single class to each host rather than having to specify every resource for each host separately and possibly missing some
+
+        Q4 -> Option 1:
+            Puppet assigns providers according to predefined rules for the resource type and data collected from the system such as the family of the underlying operating system
+
+        Q5 -> Option 3:
+            Puppet has many useful attributes. "Replace" set to True tells Puppet to replace files or symlinks that already exist on the local system but whose content doesn’t match what the source or content attribute specifies.
+
+        
+        
