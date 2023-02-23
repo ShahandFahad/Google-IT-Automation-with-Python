@@ -1,0 +1,56 @@
+Maniging Resources
+
+    In this module, you’ll learn how to manage your applications. You’ll dive into some common issues that may cause your application to crash. You’ll also understand what memory leaks are, and how to troubleshoot and prevent them. Up next, you’ll run down managing disk space; you’ll see some scenarios of how this happens and how to identify what process or application is taking up all your disk space. Then, you'll learn what network saturation is, how it can be caused, and some useful tools and techniques to solve a network saturation problem. Next, we’ll shift from managing applications to managing your time. You’ll get tips on how to prioritize tasks, estimate how long a particular task will take before finishing, and communicate expectations when dealing with important tasks. The final lesson delves into how to deal with hard and complex problems by breaking it down into small, digestible chunks while keeping your eyes on a clear goal. You’ll learn that using proactive approaches, like continuous integration, can help you with future issues that might come up. You’ll also explore how to plan for future resource usage by making good use of monitoring.
+Learning Objectives
+    Understand how to manage disk space, avoid network saturation, and manage memory leaks
+    Utilize their techniques to manage their time correctly by prioritizing tasks and estimating how long tasks will take
+    Understand the importance of communicating expectations of completing tasks, fixes, and bugs
+    Understand how to deal with complex problems by breaking them down
+    Utilize proactive approaches like continuous integration or having a test environment
+    Utilize best practices when planning for the future
+
+Managing Computer Resources
+    Memory leak
+        A memory leak, happens when a chunk of memory that's no longer needed is not released. 
+
+        An app that still needs a lot of memory, even after a restart, most likely points to a memory leak.  
+
+     Garbage collector
+        Garbage collector that's in charge of freeing the memory that's no longer in use.
+
+ Large temporary files may remain if an application crashes because it’s not cleaned up automatically.  
+
+Latency
+    The latency is the delay between sending a byte of data from one point and receiving it on the other. 
+
+Bandwidth
+    The bandwidth is how much data can be sent or received in a second.
+
+Traffic shaping
+    This is a way of marking the data packets sent over the network with different priorities. 
+
+    
+There are limits to how many connections a single server can have, which will prevent new connections.  
+
+
+Technical Debt
+    Restarting a server is a quick-fix or short-term
+    Technical debt is defined as the implied cost of additional rework caused by choosing an easy (limited) solution now instead of using a better, but more difficult, solution.
+
+Prioritizing tasks
+    The most urgent tasks should be done immediately after completing the list.  
+
+    The best way to estimate time on a new project is to compare your estimate to similar tasks or projects completed previously. 
+
+Spare drives
+    Spare drives are a practical shortcut that can quickly replace hard drives in a pre-fail state.  
+
+
+Someone who has solved the issue before can apply the short-term remediation right away, and long-term solutions can be discussed later.  
+
+Including debug logging in code can make troubleshooting easier because logs can help pinpoint the actual issue, and speed up remediation
+
+ Network Attached Storage (NAS) products from vendors like NetApp can provide additional shelves to add more storage as the website’s content, and users’ data increases in size.  
+
+ When updating code to fix an issue, create a new test to ensure the change performs the intended actions.  
+

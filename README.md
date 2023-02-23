@@ -8,10 +8,14 @@ This program builds on your IT foundations to help you take your career to the n
 
 This certificate can be completed in about 6 months and is designed to prepare you for a variety of roles in IT, like more advanced IT Support Specialist or Junior Systems Administrator positions. Upon completion, you can share your information with potential employers, like Walmart, Sprint, Hulu, Bank of America, Google (of course!), and more.
 
-### Certificates
+---
+
+# Certificates
 
 [ 1: Crash Course on Python](https://coursera.org/share/d407cda6e0972069b6b296c96f8bb233)
 
 [ 2: Using Python to Interact with the Operating System](https://coursera.org/share/d22629f1821039ff8df264a6549bad37)
 
 [ 3: Introduction to Git and GitHub](https://coursera.org/share/f68604fa968417ee4906f29943310373)
+
+[ 4: Troubleshooting and Debugging Techniques](https://coursera.org/share/16765a606030c1626ba3ea4541bead81)
