@@ -31,3 +31,16 @@ Traffic shaping
 
     
 There are limits to how many connections a single server can have, which will prevent new connections.  
+
+
+Technical Debt
+    Restarting a server is a quick-fix or short-term
+    Technical debt is defined as the implied cost of additional rework caused by choosing an easy (limited) solution now instead of using a better, but more difficult, solution.
+
+Prioritizing tasks
+    The most urgent tasks should be done immediately after completing the list.  
+
+    The best way to estimate time on a new project is to compare your estimate to similar tasks or projects completed previously. 
+
+Spare drives
+    Spare drives are a practical shortcut that can quickly replace hard drives in a pre-fail state.  
