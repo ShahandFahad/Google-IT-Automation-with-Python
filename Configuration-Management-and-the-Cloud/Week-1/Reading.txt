@@ -92,4 +92,61 @@ Introduction to Puppet
             Puppet has many useful attributes. "Replace" set to True tells Puppet to replace files or symlinks that already exist on the local system but whose content doesn’t match what the source or content attribute specifies.
 
         
+
+    What are Domain Specific Languages (DSL)
+        A domain specific language is a programming language that's more limited in scope.
+
+    Pupptes facts  
+         Facts are variables that represent the characteristics of the system. 
+
+         A fact is a hash that stores information about the details of a particular system.
+
+         Example: 
+                $var_name
+
+            # if else in puppet
+
+                if $puppet_var{
+                    # code here
+                } else {
+                    # code here
+                }
+
+    The driving principle of configuration management
+        Use declarative rather than procedural Like python etc.
+
+    Idempotent Action
+        An idempotent action can be performed over and over again without changing the system after the first time the action was performed, and with no unintended side effects.
+
+        An action can be performed repeatedly without changing the system after the first run
+
+        We can use an attribute like onlyif to make sure a file is changed only if it exists.
+
+      # Example
+      # if exist do change else make one and do the change
+
+        file { '/etc/issue':
+            mode => '0644',
+            content => "Internal system \l \n",
+        }
+      # work onlyif necessary
+        exec {'move example file':
+            command => 'mv /home/user/example.txt /home/user/Desktop',
+            onlyif => 'test -e /home/user/example.txt',
+        }
+
+
+        Quiz:
+         1.
+            In a declarative language, it's important to correctly define the end state we want to be in, without explicitly programming steps for how to achieve that state.
+        2. 
+            All variable names are preceded by a dollar sign in Puppet's DSL.
+
+        3. 
+            Stateless means there is no record of previous interactions, and each interaction request has to be handled based entirely on information that comes with it. 
+
+        4. 
+            By checking to see if a resource requires modification first, we can avoid wasting precious time.
         
+        5.
+            We specify the package contents inside the curly braces, placed after the package title.
