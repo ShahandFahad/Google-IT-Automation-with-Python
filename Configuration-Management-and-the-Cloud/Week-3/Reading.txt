@@ -76,3 +76,24 @@ Automation in Cloud
         Templating a Customized VM
 
          The gcloud init command sets up the authentication procedure between our virtual machine and Google Cloud.
+    
+    Cloud Scale Deployments
+        Load Balancer
+             A load balancer ensures that each node receives a balanced number of requests. When a request comes in, the load balancer picks a node to serve the response.
+
+              Load balancers reroute requests in order to balance and reduce network load.
+
+        Autoscaling
+             It allows the service to increase or reduce capacity as needed while the service owner only pays for the cost of the machines that are in use at any given time. 
+
+        What is orchestration?
+            Automation 
+                Automation is the process of replacing a manual step with one that happens automatically. 
+            Orchestration
+                 Orchestration is the automated configuration and coordination of complex IT systems and services. In other words, orchestration means automating a lot of different things that need to talk to each other.
+
+            Automation vs Orchestration
+                 Automation is when we set up a single step in a process to require no oversight, while orchestration refers to automating the entire process.
+
+            Cloud Infrastructure as Code
+                IaC uses special machine-readable config files to automate configuration management.
