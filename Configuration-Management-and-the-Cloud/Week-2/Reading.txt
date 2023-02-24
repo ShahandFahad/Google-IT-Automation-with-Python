@@ -1,0 +1,112 @@
+Deploying Puppet
+    In this module, you’ll dive into deploying Puppet on your local machine. Once you’ve completed that task, you’ll start creating and applying Puppet rules, managing resource relationships, and organizing your Puppet modules, which are a collection of manifests and associated data. Next, you’ll learn about Puppet nodes and node definitions and how they’re used to apply rules to your fleet. Then, you’ll dive into the Puppet certificate infrastructure, which explores the logic behind how the server can trust that a client is really who it claims to be. This topic will introduce the concepts of public key infrastructure and secure socket layer, which can ensure the clients can be trusted. Once you’ve understood these concepts, you’ll get to see a Puppet deployment in action! Your final lesson will center on updating, modifying, and testing manifests that you’ve deployed to your fleet. You’ll explore Puppet parser validate commands that will allow you to check the syntax to ensure it's correct. Next, you’ll explore the difference between production and testing environments, and how you can safely roll out changes to the testing environment to catch any errors. You’ll also learn about development environments and how you can siphon part of your fleet to an early-adopters or canary track to roll out changes, modification, or updates to that subset of machines.
+Learning Objectives
+    Deploy and run Puppet locally
+    Create, modify, and update Puppet rules
+    Understand the concepts of public key infrastructure and secure socket layer
+    Understand the difference between production and testing environments
+    Explore how canaries and development environments are helpful when deploying changes
+    Understand the benefits of multiple environments
+
+
+Deploying Puppet locally
+    Install puppet locally
+        sudo apt install puppet-master
+
+
+    Apply puppet package
+        sudo puppet apply -v tools.pp
+
+    Catalog
+         The catalog is the list of rules that are generated for one specific computer once the server has evaluated all variables, conditionals, and functions. 
+
+    Manifests
+        Manifest files are where we store the rules to be applied.
+        
+        puppet has manifets: i.e., .pp extensions
+    
+    Managing Resource Relationship
+        We write resource types in lowercase when declaring them, but capitalize them when referring to them from another resource's attributes.
+
+        When declaring resources initially, we type the resource type in lowercase. When we reference a resource relationship from another file, we capitalize the resource name being referenced.
+
+    Organizing Puppet modules
+        Modules
+            A module is a collection of manifests and associated data. 
+            A module is an easy way to organize our configuration management tools
+
+            sudo apt install puppet-module-puppetlabs-apache
+
+            cd /usr/share/puppet/modules.available/puppetlabs-apache/
+
+    Puppet Nodes
+        Puppet Agent (client)
+        Puppet Master (Server)
+
+        Node
+             In Puppet terminology, a node is any system where we can run a Puppet agent.
+        Different kinds of nodes are defined, allowing different sets of rule catalogs to apply to different types of machines.
+
+        Puppet Certificate infrastructure
+           Pupet use PKI( Puplic Key Inftrastructure)
+
+           The CA either queues a certificate request for manual validation, or uses pre-shared data to verify before sending the certificate to the agent.
+
+        Setting up Puppet Clients and Servers
+
+            sudo puppet config --section master set autosign true
+
+            ssh webserver
+            sudo apt install puppet (puppet agent)
+
+            sudo puppet config set server ubuntu.example.com
+
+            sudo puppet agent -v --test
+
+
+        The Certificate Authority creates an SSL key for the agent machine and creates a certificate request.
+
+    Quiz:
+        1.
+            A FQDN is a complete domain name for a specific machine that contains both the hostname and the domain name. 
+
+        2.
+            Into modules
+        3. 
+            After receiving a certificate, the node will reuse it for subsequent logins. 
+
+        4.
+            A fully qualified domain name (FQDN) is the unabbreviated name for a particular computer, or server. There are two elements of the FQDN: the hostname and the domain name.
+
+        5.
+            Puppet uses an Secure Sockets Layer (SSL) Public Key Infrastructure to authenticate both nodes and masters.
+
+
+
+    Updating Deployments
+        Modifying and Testing Manifests
+            Puppet Parser Validator
+            The puppet parser validate command checks the syntax of the manifest to make sure it's correct.
+
+        Safely Rolling out Changes and Validating Them
+            Production
+                In an infrastructure context, production is the parts of the infrastructure where a service is executed and served to its users. 
+            
+            By creating separate directories for different purposes, such as testing and production, we can ensure changes don't affect end users.
+
+        
+        Quiz:
+            1. 
+                Environments in Puppet are used to isolate software in development from software being served to end users.
+
+            2. 
+                No Operations mode makes Puppet simulate what it would do without actually doing it.
+
+            3. 
+                We can test our manifests automatically by using rspec tests. In these tests, we can verify resources exist and have attributes set to specific values.
+            4.
+                If we can identify a problem before it reaches all the machines in the production  environment, we’ll be able to keep the problem isolated.
+            
+            5.
+                Using the puppet parser validate command is the simplest way to check that the syntax of the manifest is correct.
+
