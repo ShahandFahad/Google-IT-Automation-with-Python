@@ -40,3 +40,37 @@ Building Software for the Cloud
             Everything used to run the service is referred to as the environment. This includes the machines and networks used for running the service, the deployed code, the configuration management, the application configurations, and the customer data.
         Latency
             Latency is the amount of time it takes to complete a read or write operation.
+        
+
+    Monitoring and Alerting 
+        Monitoring
+             Monitoring lets us look into the history and current status of a system. 
+        Push monitoring
+             When push monitoring is used, the service being monitored actively sends metrics to the monitoring system. 
+        White Box Monitoring
+        Black Box Monitoring
+
+    Getting Alerts When Things Go Wrong
+        Ticket
+            A ticket is an alert that can be attended to later.
+        Bug Report
+             A bug report  is an alert that can be fixed when there is time.
+        Cron Job
+            A cron job is a process scheduled by the Linux process cron.
+        Pages
+            Pages are alerts that need immediate human attention, and are often in the form of SMS or email.
+    Service Level Objectives
+        SLOs are pre-established performance goals for a specific service.
+
+        3-9 Service
+            An error budget of .1% would equal 99.9% uptime, or a three-nine service.
+        2-9 Service
+            An error budget of 1% would equal 99% uptime, or a two-nine service.
+        4-9 Service
+            If we have an SLO of 99.99%, that gives us an error budget of .01%.
+        5-9 Servive 
+            0.001%
+
+    Basic Monitoring in GCP
+        Alerting Policy
+            An Alerting Policy specifies the conditions that trigger alerts, and the actions to be taken when these alerts are triggered, like sending an email address notification. 
