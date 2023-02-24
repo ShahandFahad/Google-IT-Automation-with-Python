@@ -74,3 +74,44 @@ Building Software for the Cloud
     Basic Monitoring in GCP
         Alerting Policy
             An Alerting Policy specifies the conditions that trigger alerts, and the actions to be taken when these alerts are triggered, like sending an email address notification. 
+
+    Trouble Shooting and Debugging 
+
+        Which of the following is a valid method of troubleshooting a cloud service? (Select all that apply)
+
+
+            Run a test VM in a test environment
+
+            Correct
+            Nice job! Testing through software is always our best bet in the cloud.
+
+
+            Call the service provider
+
+            Correct
+            Well done, you! Part of the beauty of running services in the Cloud is that you aren't responsible for everything! Most Cloud providers are happy to provide various levels of support.
+
+        Rollback 
+            Rollback  is the process of restoring a database or program to a previously defined state, usually to recover from an error.
+        
+        Which of the following are important aspects of disaster recovery? (Select all that apply)
+
+
+            Having multiple points of redundancy
+
+            Correct
+            Nice job! Having several forms of redundancy, and failover reduces the impact when failure happens.
+
+
+            Having a well-documented disaster recovery plan
+
+            Correct
+            Awesome! In order to get things up and running as quickly as possible, we need to have a detailed plan.
+
+
+            Having automatic backups
+
+            Correct
+            Great work! Having automatic backups makes it easier to restore and recover.
+                    
+        
