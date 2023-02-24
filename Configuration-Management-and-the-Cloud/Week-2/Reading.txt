@@ -82,3 +82,31 @@ Deploying Puppet locally
             Puppet uses an Secure Sockets Layer (SSL) Public Key Infrastructure to authenticate both nodes and masters.
 
 
+
+    Updating Deployments
+        Modifying and Testing Manifests
+            Puppet Parser Validator
+            The puppet parser validate command checks the syntax of the manifest to make sure it's correct.
+
+        Safely Rolling out Changes and Validating Them
+            Production
+                In an infrastructure context, production is the parts of the infrastructure where a service is executed and served to its users. 
+            
+            By creating separate directories for different purposes, such as testing and production, we can ensure changes don't affect end users.
+
+        
+        Quiz:
+            1. 
+                Environments in Puppet are used to isolate software in development from software being served to end users.
+
+            2. 
+                No Operations mode makes Puppet simulate what it would do without actually doing it.
+
+            3. 
+                We can test our manifests automatically by using rspec tests. In these tests, we can verify resources exist and have attributes set to specific values.
+            4.
+                If we can identify a problem before it reaches all the machines in the production  environment, we’ll be able to keep the problem isolated.
+            
+            5.
+                Using the puppet parser validate command is the simplest way to check that the syntax of the manifest is correct.
+
