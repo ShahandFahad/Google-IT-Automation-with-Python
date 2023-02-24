@@ -58,3 +58,21 @@ Automation in Cloud
         Multi Clouds
             Finally, multi-Cloud is a mixture of public and/or private Clouds across vendors. For example, a multi-Cloud deployment may include servers hosted with Google, Amazon, Microsoft, and on-premise. 
             A hybrid Cloud is simply a type of multi-Cloud, but the key difference is that multi-Clouds will use several vendors, sometimes in addition to on-site services. 
+
+    Spinning up VMS in the Cloud  
+        Reference vs Templating  
+            Reference images store the contents of a machine in a reusable format, while templating is the process of capturing all of the system configuration to let us create VMS in a repeatable way.
+        Disk Image
+            A disk image is a snapshot of a virtual machine’s disk, and is an exact copy of the virtual machine at the time of the snapshot.
+        Creating a New VM Using the GCP Web UI
+        Customzing VMs in GCP
+
+        Question
+
+            It’s important to know where to copy our systemd service file on Linux in order to configure our scripts as services. Do you remember the location of the systemd directo
+       
+            Ans: 
+                etc/systemd/system/ is the default systemd directory in many Linux distros, including Red Hat Linux.
+        Templating a Customized VM
+
+         The gcloud init command sets up the authentication procedure between our virtual machine and Google Cloud.
