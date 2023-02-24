@@ -1,0 +1,117 @@
+Managing Cloud Instance at Scale    
+    In this module, you’ll learn all about storing data in the cloud. You’ll rundown the different types of storage available, like block storage and object storage, and how they differ. You’ll explore load balancing further and dive into some load balancing techniques, like round-robin DNS and sticky sessions. Next, you’ll dive into change management, including the different ways to test your changes and how to push them. You’ll explore different testing methods, like unit tests and integration tests. You’ll also cover continuous integration, the use of continuous deployment, and how to apply A/B testing. Next up, you’ll look at some errors you might encounter along the way, like quotas or limits, and how best to avoid or prepare for these. In the next lesson, you’ll get an understanding of monitoring and altering, and review some systems that offer it. You’ll then dive into the concept of SLA’s and how to set achievable ones. Next, you’ll look at basic monitoring in GCP, and create altering policies, set up conditions, and choose aggregators to manage the data. The last lesson will explore troubleshooting and debugging our systems. You’ll learn how to troubleshoot and debug remotely, understand. techniques for how to identify where the failure is coming from, and how to recover from a failure when it strikes.
+Learning Objectives
+    Understand and explain the different types of storage available
+    Explain the difference between round robin DNS and sticky sessions
+    List the different types of integration testing that are available
+    Understand and explain the concept of SLAs
+    Troubleshoot and debug a system without being physically present
+    Understand what a rollback is and how they can help in a system failure
+    Understand how primary and secondary instances can help in a disaster recovery situation
+
+
+Building Software for the Cloud
+    Managing Cloud Instances at Scale
+    Storing Data in the Cloud
+        Block storage
+        Object Storage  
+        Blob Storage      
+    Ephemeral vs Block Storage
+        Our block storage can be either persistent or ephemeral. Persistent storage is used for instances that are long lived, and need to keep data across reboots and upgrades. On the flip side, ephemeral storage is used for instances that are only temporary, and only need to keep local data while they're running. Ephemeral storage is great for temporary files that your service needs to create while it's running, but you don't need to keep.
+
+    Load balancing
+        Techniques
+            Round Robin DNS
+                The Round-robin approach serves clients one at a time, starting with the first, and making rounds until it reaches the beginning again.
+        Sticky sessions
+            Using sticky sessions means all requests from the same client always go to the same back end server
+        CDN's
+            There are some providers dedicated to bringing the contents of your services as close to the user as possible. These are the content delivery networks or CDNs. They make up a network of physical hosts that are geographically located as close to the end user as possible.
+        Change Management
+            If we want to fix bugs and improve features in our services, we have to make changes. But we can make changes in a controlled and safe way. This is called change management, and it's what lets us keep innovating while our services keep running.
+        Continuous integration
+            ontinuous Integration means the software is built, uploaded, and tested constantly.
+        
+        Understanding Limitations
+            Rate limits
+                Cloud providers will often enforce rate limits on resource-hungry service calls to prevent one service from overloading the entire system.
+
+        Environment
+            Everything used to run the service is referred to as the environment. This includes the machines and networks used for running the service, the deployed code, the configuration management, the application configurations, and the customer data.
+        Latency
+            Latency is the amount of time it takes to complete a read or write operation.
+        
+
+    Monitoring and Alerting 
+        Monitoring
+             Monitoring lets us look into the history and current status of a system. 
+        Push monitoring
+             When push monitoring is used, the service being monitored actively sends metrics to the monitoring system. 
+        White Box Monitoring
+        Black Box Monitoring
+
+    Getting Alerts When Things Go Wrong
+        Ticket
+            A ticket is an alert that can be attended to later.
+        Bug Report
+             A bug report  is an alert that can be fixed when there is time.
+        Cron Job
+            A cron job is a process scheduled by the Linux process cron.
+        Pages
+            Pages are alerts that need immediate human attention, and are often in the form of SMS or email.
+    Service Level Objectives
+        SLOs are pre-established performance goals for a specific service.
+
+        3-9 Service
+            An error budget of .1% would equal 99.9% uptime, or a three-nine service.
+        2-9 Service
+            An error budget of 1% would equal 99% uptime, or a two-nine service.
+        4-9 Service
+            If we have an SLO of 99.99%, that gives us an error budget of .01%.
+        5-9 Servive 
+            0.001%
+
+    Basic Monitoring in GCP
+        Alerting Policy
+            An Alerting Policy specifies the conditions that trigger alerts, and the actions to be taken when these alerts are triggered, like sending an email address notification. 
+
+    Trouble Shooting and Debugging 
+
+        Which of the following is a valid method of troubleshooting a cloud service? (Select all that apply)
+
+
+            Run a test VM in a test environment
+
+            Correct
+            Nice job! Testing through software is always our best bet in the cloud.
+
+
+            Call the service provider
+
+            Correct
+            Well done, you! Part of the beauty of running services in the Cloud is that you aren't responsible for everything! Most Cloud providers are happy to provide various levels of support.
+
+        Rollback 
+            Rollback  is the process of restoring a database or program to a previously defined state, usually to recover from an error.
+        
+        Which of the following are important aspects of disaster recovery? (Select all that apply)
+
+
+            Having multiple points of redundancy
+
+            Correct
+            Nice job! Having several forms of redundancy, and failover reduces the impact when failure happens.
+
+
+            Having a well-documented disaster recovery plan
+
+            Correct
+            Awesome! In order to get things up and running as quickly as possible, we need to have a detailed plan.
+
+
+            Having automatic backups
+
+            Correct
+            Great work! Having automatic backups makes it easier to restore and recover.
+                    
+        

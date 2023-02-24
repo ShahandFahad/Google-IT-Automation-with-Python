@@ -19,3 +19,5 @@ This certificate can be completed in about 6 months and is designed to prepare y
 [ 3: Introduction to Git and GitHub](https://coursera.org/share/f68604fa968417ee4906f29943310373)
 
 [ 4: Troubleshooting and Debugging Techniques](https://coursera.org/share/16765a606030c1626ba3ea4541bead81)
+
+[ 5: Configuration Management and the Cloud](https://coursera.org/share/e8bf2df71c8f81b1f519a1e7f10b4753)
