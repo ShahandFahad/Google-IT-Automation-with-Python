@@ -1,0 +1,60 @@
+Create VM template and Automate deployment
+
+Introduction
+    You're an IT Administrator for your company and you're assigned to work on a project that requires you to deploy eight virtual machines (VMs) as web servers. Each of them should have the same configuration. You'll create a VM, set up an auto-enabled service, and make it a template. Then you'll use the template to create seven more VMs.
+
+What you'll do
+    Create a VM using GCP web UI and make a template out of it
+
+    Use a command-line interface to interact with VMs
+
+    Learn how to configure an auto-enabled service
+
+    Learn to use gcloud to deploy VMs with a template
+
+
+1. Create a VM instance from the Cloud Console
+
+   Git clone
+        Use Git to clone the repository by using the following command:
+
+            git clone https://www.github.com/google/it-cert-automation-practice.git
+     
+        File operation
+            Once you have the repository successfully cloned, navigate to the Lab3/directory.
+
+                cd ~/it-cert-automation-practice/Course5/Lab3
+        
+        To list the files in the working directory Lab3/ use the list command.
+
+                ls 
+        
+        In order to enable hello_cloud.py to run on boot, copy the file hello_cloud.py to the /usr/local/bin/ location.
+
+                sudo cp hello_cloud.py /usr/local/bin/
+        
+        Also copy hello_cloud.service to the /etc/systemd/system/ location.
+
+                sudo cp hello_cloud.service /etc/systemd/system
+        
+        Now, use the systemctl command to enable the service hello_cloud.
+
+                sudo systemctl enable hello_cloud.service
+        
+
+2. Restart the VM
+3. Create VMs using a template
+4. Through Command line
+    Now, you'll create new VM instances with the template named vm1-template from your local computer using gcloud command-line interface. To do this, return back to the command line interface on your local computer, and enter the following command:
+
+        gcloud compute instances create --zone us-west1-b --source-instance-template vm1-template vm2 vm3 vm4 vm5 vm6 vm7 vm8
+    
+    Wait for the command to finish. Once it's done, you can view the instances through the Console or by using the following gcloud command on your local terminal:
+
+        gcloud compute instances list
+    
+    Now, open the external links for vm2 and vm8 to check if all the configuration set up properly as vm1.
+
+    Click Check my progress to verify the objective.
+    Success: Create instances using the template
+    Create instances using the template
