@@ -1,0 +1,99 @@
+Automation in Cloud
+    Cloud Servies Overview
+        SaaS (Software as a Serive)
+        PaaS (Platform as a Service)
+        IaaS (Infrastructre as Service)
+
+    
+     Infrastructure as a Service (IaaS) provides users with the bare minimum needed to utilize a server’s computational resources, such as a virtual machine. It is the user's responsibility to configure everything else.
+     i.e,. Qwiklabs use IaaS
+
+    Scalling in the Cloud
+        Capcity
+            Capacity is how much the service can deliver.
+        Scaling, Upscaling
+        Scale Horizantally
+        Scale Vertically
+        Automatic Scalling
+        Manual Scalling
+
+      Adding capacity to our network to meet demand—whether vertically or horizontally—is considered to be upscaling.
+
+      Evaluating the Cloud
+         We should always use reasonable judgment to protect the machines that we deploy ,whether that's on physical server is running on-premise or on virtual machines in the Cloud. It's also important to keep in mind that security systems can be expensive to implement correctly. 
+
+    What are some advantages to using cloud services? (Select all that apply)
+
+
+        Offload complicated setups to the provider
+
+        Correct
+        Great work! Cloud services provide many advantages, such as outsourcing support and maintenance, simplifying configuration management, and letting the provider take care of security.
+
+
+        Outsource troubleshooting and maintenance to the provider
+
+        Correct
+        Great work! Cloud services provide many advantages, including simplifying configuration management, outsourcing support and maintenance, and letting the provider take care of security.
+
+
+        Letting the provider worry about complicated security measures
+
+        Correct
+        Great work! Cloud services provide several advantages, like putting the provider in charge of security.
+
+
+    Migrating to the Cloud
+        Containers
+            Containers are applications that are packaged together with their configuration and dependencies.
+        Lift and Shift
+            When we migrate from traditional server configurations to the Cloud, we lift the current configuration and shift it to a
+
+        Pulic Clouds
+            We call public Cloud the Cloud services provided to you by a third party. It's called public because Cloud providers offer services to, you guessed it, the public. 
+        Private Clouds
+            A private Cloud is when your company owns the services and the rest of your infrastructure, whether that's on-site or in a remote data center. It's private because it's just for your company, like having your own Cloud in the sky. 
+        Hybrid Clouds
+            A hybrid Cloud is a mixture of both public and private Clouds. In this scenario, some workloads are run on servers owned by your company, while others are run on servers owned by a third party. The trick to making the most of the hybrid Cloud is ensuring that everything is integrated smoothly. This way, you can access, migrate, and manage data seamlessly no matter where it's hosted. 
+        Multi Clouds
+            Finally, multi-Cloud is a mixture of public and/or private Clouds across vendors. For example, a multi-Cloud deployment may include servers hosted with Google, Amazon, Microsoft, and on-premise. 
+            A hybrid Cloud is simply a type of multi-Cloud, but the key difference is that multi-Clouds will use several vendors, sometimes in addition to on-site services. 
+
+    Spinning up VMS in the Cloud  
+        Reference vs Templating  
+            Reference images store the contents of a machine in a reusable format, while templating is the process of capturing all of the system configuration to let us create VMS in a repeatable way.
+        Disk Image
+            A disk image is a snapshot of a virtual machine’s disk, and is an exact copy of the virtual machine at the time of the snapshot.
+        Creating a New VM Using the GCP Web UI
+        Customzing VMs in GCP
+
+        Question
+
+            It’s important to know where to copy our systemd service file on Linux in order to configure our scripts as services. Do you remember the location of the systemd directo
+       
+            Ans: 
+                etc/systemd/system/ is the default systemd directory in many Linux distros, including Red Hat Linux.
+        Templating a Customized VM
+
+         The gcloud init command sets up the authentication procedure between our virtual machine and Google Cloud.
+    
+    Cloud Scale Deployments
+        Load Balancer
+             A load balancer ensures that each node receives a balanced number of requests. When a request comes in, the load balancer picks a node to serve the response.
+
+              Load balancers reroute requests in order to balance and reduce network load.
+
+        Autoscaling
+             It allows the service to increase or reduce capacity as needed while the service owner only pays for the cost of the machines that are in use at any given time. 
+
+        What is orchestration?
+            Automation 
+                Automation is the process of replacing a manual step with one that happens automatically. 
+            Orchestration
+                 Orchestration is the automated configuration and coordination of complex IT systems and services. In other words, orchestration means automating a lot of different things that need to talk to each other.
+
+            Automation vs Orchestration
+                 Automation is when we set up a single step in a process to require no oversight, while orchestration refers to automating the entire process.
+
+            Cloud Infrastructure as Code
+                IaC uses special machine-readable config files to automate configuration management.
