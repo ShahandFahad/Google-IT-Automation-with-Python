@@ -21,3 +21,5 @@ This certificate can be completed in about 6 months and is designed to prepare y
 [ 4: Troubleshooting and Debugging Techniques](https://coursera.org/share/16765a606030c1626ba3ea4541bead81)
 
 [ 5: Configuration Management and the Cloud](https://coursera.org/share/e8bf2df71c8f81b1f519a1e7f10b4753)
+
+[ 6: Automating Real-World Tasks with Python](https://coursera.org/share/0b06b90ba40b50a40981e08324e02af0)
